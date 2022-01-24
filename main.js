@@ -1,30 +1,46 @@
-canvas=document.getElementById("myCanvas");
+canvas=document.getElementById("my_canvas");
 ctx=canvas.getContext("2d");
-color="red";
+
 ctx.beginPath();
-ctx.lineWidth=2;
-ctx.strokeStyle=color;
-ctx.arc(400,200,40,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.lineWidth=4;
+ctx.arc(150,200,40,0,2* Math.PI);
+
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle="black";
+ctx.lineWidth=4;
+ctx.arc(250,200,40,0,2* Math.PI);
+
 ctx.stroke();
 
-canvas.addEventListener("mousedown",my_mousedown);
-function my_mousedown(e)
-{
-  mouse_x=e.clientX-canvas.offsetLeft;
-  
-  mouse_y=e.clientY-canvas.offsetTop;
 
-  console.log(mouse_x,mouse_y);
-  circle(mouse_x,mouse_y);
-}
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle="red";
+ctx.lineWidth=4;
+ctx.arc(350,200,40,0,2* Math.PI);
 
-function circle(mouse_x,mouse_y)
-{
-    ctx.beginPath();
-    ctx.lineWidth=2;
-    ctx.strokeStyle=color;
-    ctx.arc(mouse_x,mouse_y,40,0,2*Math.PI);
-    ctx.stroke();
+ctx.stroke();
 
-}
+
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle="yellow";
+ctx.lineWidth=4;
+ctx.arc(200,250,40,0,2* Math.PI);
+
+ctx.stroke();
+
+
+
+
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle="green";
+ctx.lineWidth=4;
+ctx.arc(300,250,40,0,2* Math.PI);
+
+ctx.stroke();
+
 
